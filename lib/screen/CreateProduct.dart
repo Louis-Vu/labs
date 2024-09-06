@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import '../model/Product.dart';
 import '../service/ProductService.dart';
 
-class ProductAddScreen extends StatefulWidget {
+class Createproduct extends StatefulWidget {
   @override
   _ProductAddScreenState createState() => _ProductAddScreenState();
 }
 
-class _ProductAddScreenState extends State<ProductAddScreen> {
+class _ProductAddScreenState extends State<Createproduct> {
   final ProductService apiService = ProductService();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController descriptionController = TextEditingController();

@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import '../model/Product.dart';
 import '../service/ProductService.dart';
 
-class ProductEditScreen extends StatefulWidget {
+class Productupdatescreen extends StatefulWidget {
   final Product product;
 
-  ProductEditScreen({required this.product});
+  Productupdatescreen({required this.product});
 
   @override
   _ProductEditScreenState createState() => _ProductEditScreenState();
 }
 
-class _ProductEditScreenState extends State<ProductEditScreen> {
+class _ProductEditScreenState extends State<Productupdatescreen> {
   final ProductService apiService = ProductService();
   late TextEditingController nameController;
   late TextEditingController descriptionController;
@@ -37,7 +37,7 @@ class _ProductEditScreenState extends State<ProductEditScreen> {
 
     try {
       await apiService.updateProduct(widget.product.id, updatedProduct);
-      Navigator.pop(context); // Quay lại danh sách sản phẩm sau khi cập nhật thành công
+      Navigator.pop(context);
     } catch (error) {
       print('Error updating product: $error');
     }

@@ -46,7 +46,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
               // Điều hướng đến màn hình thêm sản phẩm
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ProductAddScreen()),
+                MaterialPageRoute(builder: (context) => Createproduct()),
               ).then((_) {
                 // Sau khi thêm sản phẩm, làm mới danh sách
                 setState(() {
@@ -83,7 +83,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                           // Chuyển đến màn hình sửa
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => ProductEditScreen(product: product)),
+                            MaterialPageRoute(builder: (context) => Productupdatescreen(product: product)),
                           );
                         },
                       ),
